@@ -494,7 +494,7 @@ public class Http {
             req.setHeader("User-Agent", headersProvider.getUserAgent())
                 .setHeader("X-Super-Properties", AnalyticSuperProperties.INSTANCE.getSuperPropertiesStringBase64())
                 .setHeader("Accept", "*/*")
-                .setHeader("Authorization", headersProvider.getAuthToken())
+                .setHeader("Authorization", "Bot " + headersProvider.getAuthToken())
                 .setHeader("Accept-Language", headersProvider.getAcceptLanguages())
                 .setHeader("X-Discord-Locale", headersProvider.getLocale());
             return req;
@@ -534,7 +534,7 @@ public class Http {
                 .setHeader("X-Super-Properties", RNSuperProperties.getSuperPropertiesBase64())
                 .setHeader("Accept-Language", headersProvider.getAcceptLanguages())
                 .setHeader("Accept", "*/*")
-                .setHeader("Authorization", headersProvider.getAuthToken())
+                .setHeader("Authorization", "Bot " + headersProvider.getAuthToken())
                 .setHeader("X-Discord-Locale", headersProvider.getLocale())
                 .setHeader("X-Discord-Timezone", TimeZone.getDefault().getID());
             return req;
