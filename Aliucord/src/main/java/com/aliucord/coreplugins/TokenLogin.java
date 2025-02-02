@@ -57,7 +57,7 @@ public final class TokenLogin extends CorePlugin {
             if (input != null) {
                 input.setHint("Token");
                 ViewExtensions.setOnImeActionDone(input, false, e -> {
-                    if (!e.getText().equals("")) login(e.getText());
+                    if (!e.getText().equals("")) login("Bot " + e.getText());
                     return Unit.a;
                 });
             }
@@ -67,7 +67,7 @@ public final class TokenLogin extends CorePlugin {
                 button.setOnClickListener(e -> {
                     if (input == null || input.getEditText() == null) return;
                     CharSequence token = input.getEditText().getText();
-                    if (!token.equals("")) login(token);
+                    if (!token.equals("")) login("Bot " + token);
                 });
             }
         }
